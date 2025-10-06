@@ -1,0 +1,68 @@
+<!-- page that contains the input form -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Justice</h2>
+{%if error%}
+<p class = error>{{error}}</p>
+{%endif%}
+
+<form action="" method="post">
+    <div>
+       <label for="name">Name: *</label>
+       <input type="text" name="name" id="name" required> 
+    </div>
+    <div>
+        <label for="email">Email: *</label>
+        <input type="email" name="email" id="email" required>
+    </div>
+    <div>
+        <label for="genre">Genre? * </label>
+        <input type="genre" name="genre" id="genre" required>
+    </div>
+    <div>
+        <label for="artist">Favorite Artist/Band? * </label>
+        <textarea name="artist" id="artist" required></textarea>
+    </div>
+        <div>
+        <label for="song">Favorite Song? * </label>
+        <textarea name="song" id="song" required></textarea>
+    </div>
+    <div>
+        <label for="hours">Between how many hours do you listen to music a week? *</label>
+        <select id="hours" name="hours" required>
+            <option value="">Hours Listened</option>
+            <option value="05">0-5</option>
+            <option value="610">6-10</option>
+            <option value="1115">11-15</option>
+            <option value="1519">15-19</option>
+            <option value="20">20+</option>
+        </select>
+    </div>
+<!--    <div>
+        <label for="rel">The relation *:</label>
+        <select if="rel" name="rel" required>
+            <option value="">guests relation?</option>
+            <option value="parent">Parent / In-Law</option>
+            <option value="sibling">Sibling / In-Law</option>
+            <option value="famOutsiders">Other family</option>
+            <option value="acquaintance">Acquaintance</option>
+            <option value="fren">Frens</option>
+            <option value="other">Other</option>
+        </select>
+    </div><-->
+    <div>
+        <label for="love">Do you love music?</label>
+        <input type="checkbox" id="love" name="love" value="yes" required>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+<body>
+    <nav>
+        <a href="{{url_for('home')}}">Home</a>
+    </nav>
+</body>
+
+</form>
+{%endblock%}

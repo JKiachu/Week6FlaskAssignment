@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> {%block title%} My Music Taste {%endblock%}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{url_for('yourMusic')}}"></a>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+</html>

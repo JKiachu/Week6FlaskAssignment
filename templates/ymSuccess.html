@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+<h2 class="success">Rockin Success</h2>
+
+<div>
+    <h3>Your Music Taste:</h3>
+    <p><strong>Name: </strong> {{ name }}</p>   
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Genre:</strong> {{ genre }}</p>
+    <p><strong>Favorite Artist/Band:</strong> {{ artist }}</p>
+    <p><strong>Favorite Song:</strong> {{ song }}</p>
+    <p><strong>Time listened per week:</strong> {{ hours }}</p>
+    <p><strong>Do you love music?</strong> {{ "Yes" if love else "No" }}</p> 
+</div>
+<body>
+    <nav>
+        <a href="{{ url_for('yourMusic') }}">Do you want to change an answer?</a>
+        <p></p>
+        <a href="{{url_for('home')}}">Home</a>
+    </nav>
+</body>
+
+
+{% endblock %}
