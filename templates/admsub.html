@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+{%block title%}{{super()}} - Submissions(Admin) {%endblock%}
+{%block content%}
+
+<H1>Submissions</H1>
+<table class="table table-striped" border="1">
+    <tr>
+        <th>Genre</th>
+        <th>Hours</th>
+        <th>Love</th>
+    </tr>
+    {%for stuff in  stuffs %}
+    <tr>
+        <td>{{stuff.Genre}}</td>
+        <td>{{stuff.Hours}}</td>
+        <td>{{stuff.Love}}</td>
+        </tr>
+        {%endfor%}
+</table>
+
+{%endblock%}
